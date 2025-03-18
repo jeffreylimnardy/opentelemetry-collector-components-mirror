@@ -1,7 +1,9 @@
 #!/bin/sh
 
-set -e
-set -o pipefail
+set -o nounset  # treat unset variables as an error and exit immediately.
+set -o errexit  # exit immediately when a command fails.
+set -E          # must be set if you want the ERR trap
+set -o pipefail # prevents errors in a pipeline from being masked
 
 # This script checks if the GitHub milestone is closed before release.
 
