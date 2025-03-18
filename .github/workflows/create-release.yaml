@@ -59,7 +59,7 @@
 
    publish-release:
        needs:
-         - valdate-release
+         - validate-release
        runs-on: ubuntu-latest
 
        steps:
