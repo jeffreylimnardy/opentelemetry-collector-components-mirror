@@ -20,6 +20,8 @@
    # check if tag is a valid semantic version
    # check that no release already exists with that name
    validate-release:
+     env:
+      GH_TOKEN: ${{ github.token }}
      name: Validate release
      runs-on: ubuntu-latest
      steps:
