@@ -50,11 +50,11 @@
 
        # create a branch for the release and push it to the repository
        - name: Create release branch (dry-run)
-         if: ${{ inputs.dry_run == true }}
+         if: ${{ inputs.dry-run == true }}
          run: "./hack/scripts/create_branch_and_tag.sh -v ${{ inputs.release_version }} -r origin -d"
 
        - name: Create release branch
-         if: ${{ inputs.dry_run == false }}
+         if: ${{ inputs.dry-run == false }}
          run: "./hack/scripts/create_branch_and_tag.sh -v ${{ inputs.release_version }} -r origin"
 
        # run tag-release workflow
