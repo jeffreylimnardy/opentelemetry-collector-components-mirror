@@ -65,4 +65,5 @@
        uses: ./.github/workflows/tag-release.yml
        permissions:
          id-token: write
+         contents: write
        if: inputs.dry-run == false
