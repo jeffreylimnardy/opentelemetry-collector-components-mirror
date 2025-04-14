@@ -12,8 +12,6 @@ This release process covers the steps to release new major and minor versions fo
 4. In the `opentelemetry-collector-components` repository, create a release branch.
    The name of this branch must follow the `release-x.y` pattern, such as `release-1.0`. As opentelemetry-collector follows the release schedule of the `telemetry-manager` component, the release branch should also have the same name as the `telemetry-manager` release branch.
 
-5. You're done with the release!
-
    ```bash
    git fetch upstream
    git checkout --no-track -b {RELEASE_BRANCH} upstream/main
